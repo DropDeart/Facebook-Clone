@@ -1,12 +1,19 @@
-import React from 'react'
-import './Story.css'
-import { Avatar } from '@material-ui/core'
 
-const Story = ({image,profileSrc,title }) => {
+import './Story.css'
+import  {Avatar}  from '@material-ui/core'
+
+
+
+
+function Story  ({image,profileSrc,title }) {
+  console.log(image)
+  console.log(profileSrc)
+
   return (
-    <div className='Story'>
-      <Avatar src = {profileSrc}/>
-      <h4>{}title</h4>
+    <div className='Story'style={{ backgroundImage: `url(${image})` }} >
+      <Avatar className='Avatar' src ={profileSrc} />
+      
+          <h4>{title}</h4>
     </div>
   )
 }

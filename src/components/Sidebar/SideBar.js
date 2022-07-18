@@ -19,7 +19,7 @@ const SideBar = () => {
         src="https://cdn.pixabay.com/photo/2018/09/14/23/28/avatar-3678347_960_720.png"
         title="Furkan Recep Çınar"
       />
-      <SidebarRow Icon={PeopleIcon} title="Find Friends" />
+      <SidebarRow fontSize="large" Icon={PeopleIcon} title="Find Friends" />
       <SidebarRow Icon={SupervisedUserCircleIcon} title="Groups" />
       <SidebarRow Icon={StorefrontIcon} title="Marketplace" />
       <SidebarRow Icon={Subscription} title="Watch" />
