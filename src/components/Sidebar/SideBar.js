@@ -10,14 +10,16 @@ import AssessmentIcon from '@material-ui/icons/Assessment'
 import FlagIcon from '@material-ui/icons/Flag'
 import EventIcon from '@material-ui/icons/Event'
 import FiberNewIcon from '@material-ui/icons/FiberNew'
+import { useStateValue } from '../StateProvider/StateProvider'
 
 
 const SideBar = () => {
+  const [{user}, dispatch] = useStateValue()
   return (
     <div className="Sidebar">
       <SidebarRow
-        src="https://cdn.pixabay.com/photo/2018/09/14/23/28/avatar-3678347_960_720.png"
-        title="Furkan Recep Çınar"
+        src={user.photoURL}
+        title={user.displayName}
       />
       <SidebarRow fontSize="large" Icon={PeopleIcon} title="Find Friends" />
       <SidebarRow Icon={SupervisedUserCircleIcon} title="Groups" />

@@ -10,8 +10,10 @@ import { Avatar } from '@material-ui/core' //Material UI Avatar API
 import { IconButton } from '@material-ui/core' //Material UI Icon Button API
 import MessageIcon from '@material-ui/icons/Message'
 import AddIcon from '@material-ui/icons/Add'
+import { useStateValue } from '../StateProvider/StateProvider'
 
 const Header = () => {
+  const [{user}, dispatch] = useStateValue()
   return (
     /*Header Left  Section  Facebook*/
     <div className="header">
@@ -55,8 +57,8 @@ const Header = () => {
       {/*Header Right  Section  Facebook*/}
       <div className="header_right">
         <div className="header_info">
-          <Avatar />
-          <h4>Furkan Recep Çınar</h4>
+          <Avatar src={user.photoURL} />
+          <h4>{user.displayName}</h4>
         </div>
         <div>
           <IconButton>
